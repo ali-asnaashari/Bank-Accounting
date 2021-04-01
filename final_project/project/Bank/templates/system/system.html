@@ -1,0 +1,396 @@
+{% block content %}
+
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Watson Bank System</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"/>
+    <title>Watson Bank System</title>
+
+    <style>
+    body{background-image: url("https://img.freepik.com/free-vector/elegant-white-background-with-shiny-lines_1017-17580.jpg?size=626&ext=jpg");
+         background-size: cover;}
+    @media (max-width: 767px) {
+        .column-1,
+        .column-2 {
+            width: 100%;
+        }
+    }
+    @media (min-width: 768px) and (max-width: 991px) {
+        .column-1 {
+            width: 50%;
+        }
+        .column-2 {
+            width: 100%;
+        }
+    }
+    @media (min-width: 992px) {
+        .column-2,
+        .column-1 {
+            width: 33%;
+        }
+    }
+    </style>
+</head>
+<body>
+<div class="alert alert-warning alert-dismissible fade show text-center text-justify ml-2" style="height:65px" role="alert">
+  <strong>Well done!</strong> You should check in on some of those fields below.
+  </button>
+</div>
+
+<!----------------------------------------------------------SignUp Now---------------------------------------------------------------->
+
+<div class="row pl-2" style="color:#8EBAF0">
+
+  <div class="column-1 px-2 mb-r pl-3">
+
+    <!--Card-->
+    <div class="card primary-color-dark">
+
+      <!--Card image-->
+      <div class="view">
+        <img src="https://vspot.s3.amazonaws.com/sign-up/SignUp-Share-Image-1200x628-Facebook.jpg" class="card-img-top" style="height:250px" alt="photo">
+        <a href="#">
+          <div class="mask rgba-white-slight"></div>
+        </a>
+      </div>
+
+      <!--Card content-->
+      <div class="card-body text-center">
+        <!--Title-->
+        <h4 class="card-title" style="color:#808B96;font-size:16px;">SIGN UP</h4>
+        <!--Text-->
+        <p class="card-text white-text">Pressing This Button when you start doing or having something or start being a member of a group.</p>
+        <a href="{% url 'system:signup' %}" class="btn btn-primary btn-outline-white btn-md">SignUp Now</a>
+      </div>
+
+    </div>
+    <!--/.Card-->
+
+  </div>
+  <!-- Grid column -->
+
+  <!----------------------------------------------------------Show Accounts List-------------------------------------------------------------->
+
+  <!-- Grid column -->
+  <div class="column-2 px-2 mb-r ml-2">
+
+    <!--Card-->
+    <div class="card default-color-dark">
+
+      <!--Card image-->
+      <div class="view">
+        <img src="https://www.corpinconsultants.com/wp-content/uploads/2019/11/bank-account-opening-dubai-1170x720.jpg" class="card-img-top" style="height:250px" alt="photo">
+        <a href="#">
+          <div class="mask rgba-white-slight"></div>
+        </a>
+      </div>
+
+      <!--Card content-->
+      <div class="card-body text-center">
+        <!--Title-->
+        <h4 class="card-title" style="color:#808B96;font-size:16px;">SHOW ACCOUNT LIST</h4>
+        <!--Text-->
+        <p class="card-text white-text">Pressing This Button will take you to a web page that can be Show Account that Create In This Bank</p>
+        <a href="{% url 'system:account_list' %}" class="btn btn-info btn-outline-white btn-md">Show Accounts List</a>
+      </div>
+
+    </div>
+    <!--/.Card-->
+
+  </div>
+  <!-- Grid column -->
+
+  <!-----------------------------------------------------------Create Account List------------------------------------------------------------->
+
+  <!-- Grid column -->
+  <div class="column-1 px-2 mb-r">
+
+    <!--Card-->
+    <div class="card primary-color-dark">
+
+      <!--Card image-->
+      <div class="view">
+        <img src="https://static-news.moneycontrol.com/static-mcnews/2017/03/Bank_account_720-770x433.jpg" class="card-img-top" style="height:250px" alt="photo">
+        <a href="#">
+          <div class="mask rgba-white-slight"></div>
+        </a>
+      </div>
+
+      <!--Card content-->
+      <div class="card-body text-center">
+        <!--Title-->
+        <h4 class="card-title" style="color:#808B96;font-size:16px;">Create Account List</h4>
+        <!--Text-->
+        <p class="card-text white-text">Pressing This Button will take you to a web page that can be Make Account List In This Bank</p>
+        <a href="{% url 'system:create_account_list' %}" class="btn btn-success btn-outline-white btn-md">Create Account List</a>
+      </div>
+
+    </div>
+    <!--/.Card-->
+
+  </div>
+  <!-- Grid column -->
+
+  <!-----------------------------------------------------------Get Bank Account Logs------------------------------------------------------------->
+
+  <!-- Grid column -->
+  <div class="column-2 px-2 mb-r mt-2 ml-2">
+
+    <!--Card-->
+    <div class="card default-color-dark">
+
+      <!--Card image-->
+      <div class="view">
+        <img src="http://www.thesouthasiantimes.info/upload/2018/January/19/arrow%20upwards20180119154613_l.jpg" class="card-img-top" style="height:250px" alt="photo">
+        <a href="#">
+          <div class="mask rgba-white-slight"></div>
+        </a>
+      </div>
+
+      <!--Card content-->
+      <div class="card-body text-center">
+        <!--Title-->
+        <h4 class="card-title" style="color:#808B96;font-size:16px;">Get Bank Account Logs</h4>
+        <!--Text-->
+        <p class="card-text white-text">Pressing this button will take you to a web page that can be Show Account that Create In This Bank</p>
+        <a href="{% url 'system:account_log' %}" class="btn btn-warning text-white btn-outline-white btn-md">GetBankAccountLogs</a>
+      </div>
+
+    </div>
+    <!--/.Card-->
+
+  </div>
+  <!-- Grid column -->
+<!------------------------------------------------------------AddAccountOwner--------------------------------------------------------------->
+    <!-- Grid column -->
+  <div class="column-1 px-2">
+
+    <!--Card-->
+    <div class="card warning-color-dark mt-2">
+
+      <!--Card image-->
+      <div class="view">
+        <img src="https://m.foolcdn.com/theascenthubfs/add%20authorized%20user.jpg?width=793" class="card-img-top" style="height:250px" alt="photo">
+        <a href="#">
+          <div class="mask rgba-white-slight"></div>
+        </a>
+      </div>
+
+      <!--Card content-->
+      <div class="card-body text-center">
+        <!--Title-->
+        <h4 class="card-title" style="color:#808B96;font-size:16px;">Add Account Owner</h4>
+        <!--Text-->
+        <p class="card-text white-text ">Pressing this button will take you to a web page that can be blocked by entering an accountNumber.</p>
+        <a href="{% url 'system:account_owener' %}" class="btn btn-primary  btn-outline-white btn-md">AddAccountOwner</a>
+      </div>
+
+    </div>
+    <!--/.Card-->
+  </div>
+  <!-- Grid column -->
+
+<!-------------------------------------------------------------Block Accounts----------------------------------------------------------------->
+
+    <!-- Grid column -->
+  <div class="column-1 px-2">
+
+    <!--Card-->
+    <div class="card warning-color-dark mt-2">
+
+      <!--Card image-->
+      <div class="view">
+        <img src="http://dogcat.love/wp-content/uploads/2017/06/19/16.jpg" class="card-img-top" style="height:250px" alt="photo">
+        <a href="#">
+          <div class="mask rgba-white-slight"></div>
+        </a>
+      </div>
+
+      <!--Card content-->
+      <div class="card-body text-center">
+        <!--Title-->
+        <h4 class="card-title" style="color:#808B96;font-size:16px;">Block Accounts</h4>
+        <!--Text-->
+        <p class="card-text white-text ">This is <span style="color:red">Dangerous</span>. Pressing this button will take you to a web page that can be blocked by entering an accountNumber.</p>
+        <a href="{% url 'system:block' %}" class="btn btn-danger btn-outline-white btn-md">Block Accounts</a>
+      </div>
+
+    </div>
+    <!--/.Card-->
+
+  </div>
+  <!-- Grid column -->
+<!------------------------------------------------------------Close Accounts------------------------------------------------------------------->
+      <!-- Grid column -->
+  <div class="column-1 pl-2">
+
+    <!--Card-->
+    <div class="card warning-color-dark mt-2">
+
+      <!--Card image-->
+      <div class="view">
+        <img src="https://images.rigzone.com/images/news/articles/159336_582x327.png" class="card-img-top" style="height:250px" alt="photo">
+        <a href="#">
+          <div class="mask rgba-white-slight"></div>
+        </a>
+      </div>
+
+      <!--Card content-->
+      <div class="card-body text-center">
+        <!--Title-->
+        <h4 class="card-title" style="color:#808B96;font-size:16px;">Close Accounts</h4>
+        <!--Text-->
+        <p class="card-text white-text ">This is <span style="color:red">Dangerous</span>. Pressing this button will take you to a web page that can be Closed by entering an accountNumber.</p>
+        <a href="{% url 'system:close' %}" class="btn btn-danger  btn-outline-white btn-md">Close Accounts</a>
+      </div>
+
+    </div>
+    <!--/.Card-->
+
+  </div>
+  <!-- Grid column -->
+
+<!---------------------------------------------------------RETRIVE ACCOUNT------------------------------------------------------------------>
+      <!-- Grid column -->
+  <div class="column-1 pl-2">
+
+    <!--Card-->
+    <div class="card warning-color-dark mt-2">
+
+      <!--Card image-->
+      <div class="view">
+        <img src="https://files.virgool.io/upload/users/1095/posts/eflnyz1zrdyx/2egeeebavpmm.jpeg" class="card-img-top" style="height:250px" alt="photo">
+        <a href="#">
+          <div class="mask rgba-white-slight"></div>
+        </a>
+      </div>
+
+      <!--Card content-->
+      <div class="card-body text-center">
+        <!--Title-->
+        <h4 class="card-title" style="color:#808B96;font-size:16px;">Retrive Accounts</h4>
+        <!--Text-->
+        <p class="card-text white-text ">Pressing this button will take you to a web page that can be blocked by entering an accountNumber.</p>
+        <a href="{% url 'system:retrive_account' %}" class="btn btn-success  btn-outline-white btn-md">Retrive Accounts</a>
+      </div>
+
+    </div>
+    <!--/.Card-->
+
+  </div>
+  <!-- Grid column -->
+
+<!----------------------------------------------------------RETRIVE OWNER----------------------------------------------------------------->
+      <!-- Grid column -->
+  <div class="column-1 pl-2">
+
+    <!--Card-->
+    <div class="card warning-color-dark mt-2">
+
+      <!--Card image-->
+      <div class="view">
+        <img src="http://ayrikatm.com/wp-content/uploads/2019/03/b.jpg" class="card-img-top" style="height:250px" alt="photo">
+        <a href="#">
+          <div class="mask rgba-white-slight"></div>
+        </a>
+      </div>
+
+      <!--Card content-->
+      <div class="card-body text-center">
+        <!--Title-->
+        <h4 class="card-title" style="color:#808B96;font-size:16px;">Retrive Owner</h4>
+        <!--Text-->
+        <p class="card-text white-text ">Pressing this button will take you to a web page that can be blocked by entering an accountNumber.</p>
+        <a href="{% url 'system:retrive_owner' %}" class="btn btn-secondary  btn-outline-white btn-md">Retrive Owner</a>
+      </div>
+
+    </div>
+    <!--/.Card-->
+
+  </div>
+  <!-- Grid column -->
+
+<!----------------------------------------------------------TransactionList----------------------------------------------------------------->
+      <!-- Grid column -->
+  <div class="column-1 pl-2">
+
+    <!--Card-->
+    <div class="card warning-color-dark mt-2">
+
+      <!--Card image-->
+      <div class="view">
+        <img src="https://giaohangtietkiem.vn/wp-content/uploads/2019/06/shutterstock_465600824.jpg" class="card-img-top" style="height:250px" alt="photo">
+        <a href="#">
+          <div class="mask rgba-white-slight"></div>
+        </a>
+      </div>
+
+      <!--Card content-->
+      <div class="card-body text-center">
+        <!--Title-->
+        <h4 class="card-title" style="color:#808B96;font-size:16px;">Transaction List</h4>
+        <!--Text-->
+        <p class="card-text white-text ">Pressing this button will take you to a web page that can be blocked by entering an accountNumber.</p>
+        <a href="{% url 'system:transaction' %}" class="btn btn-info  btn-outline-white btn-md">Transaction</a>
+      </div>
+
+    </div>
+    <!--/.Card-->
+
+  </div>
+  <!-- Grid column -->
+
+<!----------------------------------------------------------TRANSACTION LIST CATCH----------------------------------------------------------------->
+
+    <!-- Grid column -->
+  <div class="column-1 pl-2">
+
+    <!--Card-->
+    <div class="card warning-color-dark mt-2">
+
+      <!--Card image-->
+      <div class="view">
+        <img src="https://cdn1.cashanalytics.com/wp-content/uploads/2019/09/Bank-account-transaction-mapping-rules.png" class="card-img-top" style="height:250px" alt="photo">
+        <a href="#">
+          <div class="mask rgba-white-slight"></div>
+        </a>
+      </div>
+
+      <!--Card content-->
+      <div class="card-body text-center">
+        <!--Title-->
+        <h4 class="card-title" style="color:#808B96;font-size:16px;">List Get Transaction</h4>
+        <!--Text-->
+        <p class="card-text white-text ">Pressing This Button Will take you to a web page that can be Show Transaction List by Sending Form Data.</p>
+        <a href="{% url 'system:transaction_get' %}" class="btn btn-warning  btn-outline-white btn-md">LIST GET Transaction</a>
+      </div>
+
+    </div>
+    <!--/.Card-->
+
+  </div>
+
+<!----------------------------------------------------------FINISH-------------------------------------------------------------
+
+</div>
+<!-- Grid row -->
+</div>
+
+
+
+<!-- Footer -->
+<footer class="bg-dark py-4 mt-5 mb-0">
+    <div class="container">
+        <div class="small text-center text-white "><strong>Copyright &copy; 2020 - All Rights Reserved to ALI.ES79</strong></div>
+    </div>
+
+</footer>
+
+</body>
+</html>
+{% endblock %}

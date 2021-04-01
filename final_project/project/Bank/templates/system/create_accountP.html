@@ -1,0 +1,54 @@
+{% block content %}
+
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Account Logs</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"/>
+
+
+    <style>
+    body {background-image: url("../static/css/images/Bone-Solid-Color-Background-Wallpaper-5120x2880.png");}
+    .btn1 {border-radius: 50%;padding: 20px;font-size: 16px;font-weight: bold;height: 100px;width: 300px;margin:auto;}
+    </style>
+</head>
+<body>
+
+	<div class="alert alert-info mb-2" role="alert">
+        <h4 class="alert-heading text-center text-muted pb-3">Watson Bank Account System</h4>
+        <!-- BACK -->
+        <a href="{% url 'system:system' %}" class="btn btn-dark " style="width:100px;margin-left:1330px;">Previous</a>
+        <p class="text-center" style="font-size:18px">This Form Display Us Watson Bank Account List Create</p>
+    </div>
+<div class="container">
+    {% comment %} {% for item in lst_acc %} {% endcomment %}
+        
+        <div class="card text-white bg-secondary mb-3 mt-2">
+            <div class="card-header bg-danger" style="font-size:18px;margin-left:340px;">AccountNumber : {{lst_acc.accountNumber}} </div>
+            <div class="card-body">
+            <p class="card-title" style="font-size:16px;color:orange ">AccountOwner :</p>
+            <p class="card-title" style="font-size:16px;margin-left:60px;">Firstname : {{lst_acc.accountOwner.firstName}}</p>
+            <p class="card-title" style="font-size:16px;margin-left:60px;">Lastname : {{lst_acc.accountOwner.lastName}}</p>
+            <p class="card-title" style="font-size:16px;margin-left:60px;">Phonenumber : {{lst_acc.accountOwner.phoneNumber}}</p>
+            <p class="card-title" style="font-size:16px;margin-left:60px;">Nationalcode : {{lst_acc.accountOwner.nationalCode}}</p>
+            <p class="card-title" style="font-size:16px;margin-left:60px;">Credit : {{lst_acc.credit}}</p>
+            <p class="card-title" style="font-size:16px;margin-left:60px;">Status : {{lst_acc.status}}</p>
+            <hr>
+            <p class="card-title" style="font-size:18px;color:MediumTurquoise">Accounts :</p>
+            {% for item1 in lst_acc.accountOwner.accounts %}
+                <p class="card-title" style="font-size:16px;margin-left:60px;">AccountNumber : {{item1.accountNumber}}</p>
+                <p class="card-title" style="font-size:16px;margin-left:60px;">Status : {{item1.status}}</p>
+                <hr>
+            {% endfor %}
+            </div>
+        </div>
+    {% comment %} {% endfor %} {% endcomment %}
+</div>
+
+</body>
+</html>
+{% endblock %}

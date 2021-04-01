@@ -1,0 +1,69 @@
+{% load static %}
+{% block content %}
+
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Watson Bank Login System</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}"/>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"/>
+</head>
+<body>
+
+<div class="container">
+
+    <div class="row mt-5">
+
+        <div class="col-md-10 offset = md-1 mt-5">
+
+            <div class="row mt-5">
+
+                <div class="col-md-5 register-left mt-5">
+                    <img src="{% static 'image/aa.png' %}" alt="flash">
+
+                    <h5 class="alert text-dark font-weight-bold">Recent News</h5>
+
+                    <div class="input-group input-group-newsletter">
+                        <input type="email" class="form-control mb-2" placeholder="Enter email..." aria-label="Enter email..." aria-describedby="basic-addon">
+                        <div class="input-group-append">
+                            <button class="btn btn-secondary mb-2" type="button">Notify Me!</button>
+                        </div>
+                    </div>
+
+                    <a href="{% url 'login' %}" class="btn btn-primary ">Login Now</a>
+                </div>
+
+                <div class="col-md-7 register-right">
+                    <h2 class="text-muted font-weight-bold " style="font-size:25px">Create Account</h2>
+                    <form class="register-form" action="" method="post">
+                        {% csrf_token %}
+                        <div class="form-group">
+                            <input type="text" name="username" class="form-control mb-2" placeholder="username">
+                            <input type="password" name="password" class="form-control mb-2" placeholder="password">
+                        </div>
+                        <input type="submit" class="btn btn-primary" style="margin-right:130px;width:200px " value="Create Now" />
+                        <!-- BACK -->
+                         <a href="{% url 'system:system' %}" class="btn btn-primary " style="width:200px;margin-right:130px;">Previous</a>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Footer -->
+<footer class="bg-dark py-4 mt-5 mb-0">
+    <div class="container">
+        <div class="small text-center text-white "><strong>Copyright &copy; 2020 - All Rights Reserved to ALI.ES79</strong></div>
+    </div>
+
+</footer>
+
+</body>
+</html>
+{% endblock %}
